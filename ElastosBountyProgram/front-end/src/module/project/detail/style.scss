@@ -4,7 +4,22 @@
 
 
 .c_Project {
-  .loading-spinner {
+  .team-selector {
+    width: 332px;
+    margin-right: $gap_0;
+  }
+
+  .team-application {
+    margin-bottom: $gap_0;
+  }
+
+  .application-form {
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  .ant-select-selection-selected-value .ant-avatar {
+    display: none;
   }
 
   .top-section {

@@ -1,9 +1,5 @@
 
 .ant-btn {
-
-  height: 40px;
-  line-height: 40px;
-
   &:hover,
   &:focus,
   &.selected {
@@ -169,4 +165,9 @@
   .ant-list-item-main {
     overflow: hidden;
   }
+}
+
+// Helpers
+.no-margin {
+  margin: 0 !important;
 }
