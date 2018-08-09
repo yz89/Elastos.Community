@@ -71,7 +71,6 @@ class C extends BaseComponent {
             <div>
                 <div className="title">
                     <span>{name}</span>
-                    <Icon className="badge" type="home"/>
                 </div>
                 <div className="leader">
                     <Avatar size="large" src={leaderImage} />
@@ -83,10 +82,12 @@ class C extends BaseComponent {
                     <div className="entry">Team Size: {teamSize}</div>
                     <div className="reward">{reward}</div>
                 </div>
-                <hr className="divider"/>
-                <div className="description-title">Description</div>
-                <hr className="divider"/>
-                <div className="description-content">{description}</div>
+                <div class="description-box">
+                    <hr className="divider"/>
+                    <div className="description-title">Description</div>
+                    <hr className="divider"/>
+                    <div className="description-content">{description}</div>
+                </div>
             </div>
         )
     }
