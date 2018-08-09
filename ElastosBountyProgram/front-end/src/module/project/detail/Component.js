@@ -2,7 +2,7 @@ import React from 'react';
 import BaseComponent from '@/model/BaseComponent'
 import moment from 'moment'
 
-import {Col, Row, Tag, Icon, Carousel, Avatar, Button, Spin, Select, Input } from 'antd'
+import {Col, Row, Tag, Icon, Carousel, Avatar, Button, Spin, Select, Input, Form } from 'antd'
 
 import './style.scss'
 
@@ -104,7 +104,8 @@ export default class extends BaseComponent {
                         </Row>
                         <Row className="actions">
                             <span className="callToActionText">Currently Hiring!</span>
-                            <Button className="colored-bottom">Join Project</Button>
+                            <Button className="colored-bottom" onClick={() => this.setState({ applying: true })}>
+                                Join Project</Button>
                             <Button className="normal-bottom">Message</Button>
                             <Button className="normal-bottom">Submit Bug</Button>
                         </Row>
@@ -120,16 +121,23 @@ export default class extends BaseComponent {
                             </Row>
                         }
                         {this.state.applying &&
-                            <div>
-                                <Input.TextArea rows={8} className="team-application" placeholder="Your application"/>
-                                <Button className="pull-right">
+                            <Form>
+                                <Form.Item className="no-margin">
+                                    <Input.TextArea rows={8} className="team-application" placeholder="Your application"/>
+                                </Form.Item>
+                                <Button className="pull-left" onClick={() => this.setState({ applying: false })}>
+                                    Cancel
+                                </Button>
+                                <Button className="pull-right" type="primary">
                                     Apply
                                 </Button>
-                                <Select defaultValue="$me" className="team-selector pull-right">
-                                    <Select.Option value="$me">Apply as myself</Select.Option>
-                                </Select>
+                                <Form.Item className="pull-right">
+                                    <Select defaultValue="$me" className="team-selector pull-right">
+                                        <Select.Option value="$me">Apply as myself</Select.Option>
+                                    </Select>
+                                </Form.Item>
                                 <div class="clearfix"/>
-                            </div>
+                            </Form>
                         }
                     </div>
                 }
