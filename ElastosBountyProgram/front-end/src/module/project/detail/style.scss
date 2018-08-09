@@ -11,6 +11,12 @@
     margin-right: $gap_0;
   }
 
+  .actions {
+    .ant-btn:not(:last-child) {
+      margin-right: $gap_0;
+    }
+  }
+
   .team-application {
     margin-bottom: $gap_0;
   }
