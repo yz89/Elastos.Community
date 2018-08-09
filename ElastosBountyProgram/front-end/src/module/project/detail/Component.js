@@ -16,7 +16,6 @@ export default class extends BaseComponent {
     componentDidMount() {
         const taskId = this.props.taskId
         taskId && this.props.getTaskDetail(taskId)
-        console.log('  detail Component received: ', taskId);
     }
 
     componentWillUnmount() {
@@ -60,6 +59,13 @@ export default class extends BaseComponent {
                 <Row className="top-section">
                     <Col xs={24} sm={24} md={8} className="col-left">
                         {this.renderUpperLeftBox()}
+                        <hr className="divider"/>
+                        <div>
+                            <Tag>Javascript</Tag>
+                            <Tag>IoT</Tag>
+                            <Tag>C++</Tag>
+                            <Tag>Finance</Tag>
+                        </div>
                     </Col>
 
                     <Col xs={24} sm={24} md={16} className="col-right">
