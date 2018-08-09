@@ -108,13 +108,17 @@ export default class extends BaseComponent {
                             <Button className="normal-bottom">Message</Button>
                             <Button className="normal-bottom">Submit Bug</Button>
                         </Row>
-                        <Row className="contributors">
-                            <div>Current Contributors</div>
 
-                        </Row>
-                        <Row className="applications">
-                            <div>Pending Applications</div>
-                        </Row>
+                        {!this.state.applying &&
+                            <Row className="contributors">
+                                <div>Current Contributors</div>
+                            </Row>
+                        }
+                        {!this.state.applying &&
+                            <Row className="applications">
+                                <div>Pending Applications</div>
+                            </Row>
+                        }
                     </div>
                 }
             </div>
